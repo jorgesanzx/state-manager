@@ -9,3 +9,8 @@ User.create([
   { email: 'user@example.com', password: 'userpassword', role: 'user' },
   { email: 'admin@example.com', password: 'adminpassword', role: 'admin' }
 ])
+
+State.create(name: 'tested')
+State.create(name: 'painted', next_state_id: State.find_by(name: 'tested').id)
+State.create(name: 'assembled', next_state_id: State.find_by(name: 'painted').id)
+State.create(name: 'designed', next_state_id: State.find_by(name: 'assembled').id)

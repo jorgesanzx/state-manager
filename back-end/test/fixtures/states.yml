@@ -1,0 +1,8 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+tested:
+  name: tested
+
+painted:
+  name: painted
+  next_state_id: <%= State.find_by(name: 'tested').id %>
