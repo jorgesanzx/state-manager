@@ -1,5 +1,6 @@
 class StatesController < ApplicationController
   before_action :set_state, only: [:show, :update, :destroy]
+  before_action :authorize, only: [:create, :update, :destroy]
 
   def index
     @states = State.all
@@ -31,6 +32,10 @@ class StatesController < ApplicationController
   end
 
   private
+
+  def authorize
+    head :unauthorized if !current_user.admin?
+  end
 
   def set_state
     @state = State.find(params[:id])

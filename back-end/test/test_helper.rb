@@ -7,8 +7,13 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  def authenticated_header
+  def authenticated_user_header
     token = Knock::AuthToken.new(payload: { sub: users(:user).id }).token
+    { 'Authorization': "Bearer #{token}" }
+  end
+
+  def authenticated_admin_header
+    token = Knock::AuthToken.new(payload: { sub: users(:admin).id }).token
     { 'Authorization': "Bearer #{token}" }
   end
 end
