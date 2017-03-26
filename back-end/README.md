@@ -1,24 +1,21 @@
-# README
+Back-end application built with [Rails](http://rubyonrails.org/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+```
+bundle install
+rails db:setup
+rails db:migrate
+```
 
-* Ruby version
+## Starting the app
 
-* System dependencies
+```
+rails s -p 3001
+```
 
-* Configuration
+## Testing
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails test
+```
