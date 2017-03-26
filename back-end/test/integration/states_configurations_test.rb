@@ -46,7 +46,7 @@ class StatesConfigurationsTest < ActionDispatch::IntegrationTest
   test 'Admin updates a state' do
     state_params = { name: @state.name, next_state_id: @state.next_state_id }
 
-    post states_url, params: { state: state_params }, headers: authenticated_admin_header
+    patch state_url(@state), params: { state: state_params }, headers: authenticated_admin_header
 
     assert_response :success
   end
@@ -54,7 +54,7 @@ class StatesConfigurationsTest < ActionDispatch::IntegrationTest
   test 'Regular user unauthorized to update a state' do
     state_params = { name: @state.name, next_state_id: @state.next_state_id }
 
-    post states_url, params: { state: state_params }, headers: authenticated_user_header
+    patch state_url(@state), params: { state: state_params }, headers: authenticated_user_header
 
     assert_response :unauthorized
   end
