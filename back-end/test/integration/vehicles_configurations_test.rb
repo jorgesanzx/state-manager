@@ -40,4 +40,12 @@ class VehiclesConfigurationsTest < ActionDispatch::IntegrationTest
 
     assert_response :success
   end
+
+  test "Can't put vehicle to states different than next" do
+    vehicle_params = { name: @vehicle.name, state_id: State.find_by(name: 'tested').id }
+
+    patch vehicle_url(@vehicle), params: { vehicle: vehicle_params }, headers: authenticated_user_header
+
+    assert_response :unprocessable_entity
+  end
 end
