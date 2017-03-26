@@ -1,5 +1,6 @@
 class State < ApplicationRecord
   has_many :vehicles, dependent: :nullify
+
   validate :next_state_id_has_to_reference_another_state
 
   private
