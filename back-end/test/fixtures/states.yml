@@ -6,3 +6,11 @@ tested:
 painted:
   name: painted
   next_state_id: <%= State.find_by(name: 'tested').id %>
+
+assembled:
+  name: assembled
+  next_state_id: <%= State.find_by(name: 'painted').id %>
+
+designed:
+  name: designed
+  next_state_id: <%= State.find_by(name: 'assembled').id %>
