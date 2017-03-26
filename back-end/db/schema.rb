@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319215348) do
+ActiveRecord::Schema.define(version: 20170326203109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,4 +31,13 @@ ActiveRecord::Schema.define(version: 20170319215348) do
     t.index ["email"], name: "index_users_on_email", using: :btree
   end
 
+  create_table "vehicles", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "state_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state_id"], name: "index_vehicles_on_state_id", using: :btree
+  end
+
+  add_foreign_key "vehicles", "states"
 end

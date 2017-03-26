@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+designed:
+  name: Designed vehicle
+  state: designed
+
+assembled:
+  name: Assembled vehicle
+  state: assembled
+
+painted:
+  name: Painted vehicle
+  state: painted
+
+tested:
+  name: Tested vehicle
+  state: tested
