@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Paper from 'material-ui/Paper';
 import Login from './Login';
-import logo from './logo.svg';
 import './App.css';
+
+const paperStyle = {
+  display: 'inline-block',
+  textAlign: 'center',
+  padding: '0 30px 30px 30px',
+};
 
 class App extends Component {
   render() {
@@ -10,12 +16,11 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Welcome to React</h2>
+            <h1>State Manager</h1>
           </div>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
+          <Paper style={paperStyle} zDepth={1}>
+            <Login />
+          </Paper>
         </div>
       </MuiThemeProvider>
     );
