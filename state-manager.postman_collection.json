@@ -55,24 +55,16 @@
 								"key": "Authorization",
 								"value": "Bearer {{jwt}}",
 								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "state_name",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "next_state_id",
-									"value": "1",
-									"type": "text",
-									"enabled": true
-								}
-							]
+							"mode": "raw",
+							"raw": "{\n  \"state\": {\n    \"name\": \"Ideation\",\n    \"next_state_id\": \"4\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -88,24 +80,16 @@
 								"key": "Authorization",
 								"value": "Bearer {{jwt}}",
 								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "state_name",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "next_state_id",
-									"value": "1",
-									"type": "text",
-									"enabled": true
-								}
-							]
+							"mode": "raw",
+							"raw": "{\n  \"state\": {\n    \"name\": \"Ideation\",\n    \"next_state_id\": \"4\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -178,24 +162,16 @@
 								"key": "Authorization",
 								"value": "Bearer {{jwt}}",
 								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "state_name",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "next_state_id",
-									"value": "1",
-									"type": "text",
-									"enabled": true
-								}
-							]
+							"mode": "raw",
+							"raw": "{\n  \"vehicle\": {\n    \"name\": \"Car\",\n    \"state_id\": \"4\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -211,24 +187,16 @@
 								"key": "Authorization",
 								"value": "Bearer {{jwt}}",
 								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "state_name",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "next_state_id",
-									"value": "1",
-									"type": "text",
-									"enabled": true
-								}
-							]
+							"mode": "raw",
+							"raw": "{\n  \"vehicle\": {\n    \"name\": \"Car\",\n    \"state_id\": \"4\"\n  }\n}"
 						},
 						"description": ""
 					},
